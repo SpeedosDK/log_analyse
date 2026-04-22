@@ -1,0 +1,8 @@
+[package]
+name = "log_analyse"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dialoguer = "0.12.0"
+rayon = "1.10"
