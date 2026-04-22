@@ -32,10 +32,12 @@ fn run() -> Result<(), Box<dyn Error>> {
 
     let start = Instant::now();
 
+    // Parallel analyse
     let results = analyze_multiple_files(&paths);
 
     println!("\nAlle filer analyseret på: {:?}", start.elapsed());
 
+    // Vis opsummering for hver fil
     for (p, result) in &results {
         match result {
             Ok(s) => show_summary(p, s),
